@@ -32,7 +32,7 @@ refuses to publish while any remain. Resolve, in one pass:
 | `PLACEHOLDER_SUPPORT_EMAIL` | public support address |
 | `PLACEHOLDER_DATE` | privacy notice date |
 | `PLACEHOLDER_APP_STORE_URL` | after the app record exists |
-| `ANALYTICS:NONE` / `ANALYTICS:POSTHOG` | swap the privacy section only after the analytics decision |
+| `ANALYTICS:NONE` / `ANALYTICS:POSTHOG` | after the analytics decision, either apply the commented POSTHOG block or delete it; its placeholders block deployment until then |
 
 ## Deploying
 

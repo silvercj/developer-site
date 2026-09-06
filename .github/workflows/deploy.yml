@@ -19,7 +19,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Refuse to deploy placeholders
         run: |
-          if grep -rl "PLACEHOLDER_" public/ | grep -v "privacy/index.html.*ANALYTICS" ; then
+          # Any PLACEHOLDER_ token blocks deployment, including the commented
+          # ANALYTICS:POSTHOG block in the privacy notice: apply it or delete it.
+          if grep -rn "PLACEHOLDER_" public/; then
             echo "::error::Unresolved PLACEHOLDER_ values in public/. Fill them in before deploying."
             exit 1
           fi
