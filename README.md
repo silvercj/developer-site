@@ -40,8 +40,8 @@ refuses to publish while any remain. Resolve, in one pass:
 2. Add repository secrets `CLOUDFLARE_API_TOKEN` (Workers Scripts: Edit) and
    `CLOUDFLARE_ACCOUNT_ID`.
 3. Push to `main`, or run `npx wrangler deploy` locally after `npx wrangler login`.
-4. Workers › developer-site › Settings › Domains: add the custom domain. Cloudflare
-   creates the DNS record when the zone is on Cloudflare.
+4. Workers & Pages › developer-site › Domains › Add Domain: `cubedcreation.com`.
+   Cloudflare creates the DNS record. Done 2026-09-07.
 
 ## DNS and email changes required
 
@@ -51,8 +51,8 @@ Nothing here is applied automatically. Each needs Chris's authorisation.
 |---|---|---|
 | Zone `cubedcreation.com` | hosting and email routing | registered at Cloudflare Registrar on 2026-09-06, so the zone and nameservers already exist; nothing to move |
 | Custom domain on the Worker | serve the site at the real hostname | Cloudflare adds the record |
-| Email Routing: enable for the zone | receive `support@cubedcreation.com` | Cloudflare adds MX and SPF records; **do not overwrite existing MX records** if the domain already receives mail elsewhere; pick a fresh domain or subdomain in that case |
-| Routing rule: `support@cubedcreation.com` → destination inbox | forward support mail | destination must be verified by Cloudflare |
+| Email Routing: onboard the domain (dashboard → Compute → Email Service → Email Routing → Onboard Domain) | receive `support@cubedcreation.com` | Cloudflare adds MX and SPF records; the domain receives no other mail |
+| Destination address (Email Routing → Destination Addresses) and routing rule `support` → that inbox | forward support mail | the rule stays disabled until the destination is verified |
 | Optional: iCloud+ custom domain or Google Workspace | reply *from* the branded address | forwarding alone replies from the personal inbox |
 
 ## Verifying
