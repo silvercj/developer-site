@@ -28,7 +28,7 @@ refuses to publish while any remain. Resolve, in one pass:
 |---|---|
 | `PLACEHOLDER_SELLER_NAME` | exact App Store seller / operator name |
 | `PLACEHOLDER_COUNTRY` | operating country |
-| `PLACEHOLDER_SUPPORT_EMAIL` | public support address |
+| `PLACEHOLDER_SUPPORT_EMAIL` | public support address (set: `support@cubedcreation.com`) |
 | `PLACEHOLDER_DATE` | privacy notice date |
 | `PLACEHOLDER_APP_STORE_URL` | after the app record exists |
 | `ANALYTICS:NONE` / `ANALYTICS:POSTHOG` | after the analytics decision, either apply the commented POSTHOG block or delete it; its placeholders block deployment until then |
@@ -51,8 +51,8 @@ Nothing here is applied automatically. Each needs Chris's authorisation.
 |---|---|---|
 | Zone `cubedcreation.com` | hosting and email routing | registered at Cloudflare Registrar on 2026-09-06, so the zone and nameservers already exist; nothing to move |
 | Custom domain on the Worker | serve the site at the real hostname | Cloudflare adds the record |
-| Email Routing: enable for the zone | receive `PLACEHOLDER_SUPPORT_EMAIL` | Cloudflare adds MX and SPF records; **do not overwrite existing MX records** if the domain already receives mail elsewhere; pick a fresh domain or subdomain in that case |
-| Routing rule: `PLACEHOLDER_SUPPORT_EMAIL` → destination inbox | forward support mail | destination must be verified by Cloudflare |
+| Email Routing: enable for the zone | receive `support@cubedcreation.com` | Cloudflare adds MX and SPF records; **do not overwrite existing MX records** if the domain already receives mail elsewhere; pick a fresh domain or subdomain in that case |
+| Routing rule: `support@cubedcreation.com` → destination inbox | forward support mail | destination must be verified by Cloudflare |
 | Optional: iCloud+ custom domain or Google Workspace | reply *from* the branded address | forwarding alone replies from the personal inbox |
 
 ## Verifying
