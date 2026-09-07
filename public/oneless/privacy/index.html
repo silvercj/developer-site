@@ -40,9 +40,10 @@
 <p>OneLess Premium is sold through Apple's App Store. Apple processes the payment and holds the purchase record; we receive no name, email or payment details. The app checks your entitlement with Apple to unlock Premium and to switch it off if a subscription lapses or is refunded. Apple's handling of your data is covered by <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</p>
 
 <h2>Analytics</h2>
-<!-- ANALYTICS:NONE -->
-<p>The current version of the app contains no analytics or crash-reporting library and sends no usage data to us. If a future version adds anonymous usage measurement, this section will say exactly what is collected, what is never collected, and how to turn it off, before that version ships.</p>
-<!-- /ANALYTICS:NONE -->
+<p><strong>Off unless you turn it on.</strong> The app has a single switch, "Share anonymous diagnostics and usage", in onboarding and in Settings. It is off by default and nothing below happens while it is off.</p>
+<p><strong>When it is on</strong>, the app sends two kinds of information: crash reports, so we can fix crashes, and a small set of fixed usage events, so we can see whether the app works: onboarding started and finished, app opened (at most once every half hour), the Premium screen shown and from where, and whether a purchase or restore succeeded, was cancelled, is pending or failed. Each event carries only fixed labels, the app version and the iOS major version, and a random identifier created on your phone that is not linked to you, your Apple Account or your purchase.</p>
+<p><strong>Never sent</strong>: your name, your reason for stopping, pick-ups, slips, cravings, triggers, gaps, streaks, plan dates, spend, check-in answers, situations you name, plans you write, reminder settings, or any text you type.</p>
+<p>Usage events go to PostHog, hosted in the European Union, and are kept for twelve months. Crash reports go to Sentry, with personal-information sending disabled, and are kept for thirty days. Turning the switch off stops both immediately; Delete all data also issues a new random identifier.</p>
 
 <h2>This website</h2>
 <p>This site is static and is served by Cloudflare. Cloudflare records standard request logs (such as IP address, user agent and the page requested) to serve and protect the site, under <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>. The site sets no cookies and runs no analytics.</p>
