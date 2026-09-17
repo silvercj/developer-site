@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vaping cost calculator: your spend per week, month and year</title>
+<meta name="description" content="Put in what you actually spend on vaping and see it per week, per month and per year. Then see the UK vape duty on the liquid you use from 1 October 2026, kept separate from guesses about shop prices.">
+<link rel="canonical" href="https://cubedcreation.com/oneless/tools/vape-cost-calculator/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Cubed Creation"><meta property="og:title" content="Vaping cost calculator"><meta property="og:description" content="Your own spend per week, month and year, and the UK vape duty on the liquid you use from 1 October 2026."><meta property="og:url" content="https://cubedcreation.com/oneless/tools/vape-cost-calculator/"><meta property="og:image" content="https://cubedcreation.com/oneless/icon-512.png"><meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Vaping cost calculator","url":"https://cubedcreation.com/oneless/tools/vape-cost-calculator/","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"author":{"@type":"Person","name":"Chris Silver"},"publisher":{"@type":"Organization","name":"Cubed Creation"}}</script>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="stylesheet" href="/style.css"><meta name="theme-color" content="#071719">
+<script defer src="/oneless/tools/vape-cost-calculator/calc.js"></script></head>
+<body>
+<div class="atmosphere" aria-hidden="true"><div class="haze"></div><div class="dawn"></div><div class="horizon"></div></div>
+<nav class="top"><div class="wrap"><a class="brand" href="/"><span class="cube"></span>Cubed Creation</a><div class="links"><a href="/">Home</a><a href="/oneless/">OneLess</a><a href="/oneless/guides/" aria-current="page">Guides</a><a href="/oneless/support/">Support</a></div></div></nav>
+<main>
+<div class="wrap">
+  <section class="headline">
+    <p class="crumbs"><a href="/">Home</a> › <a href="/oneless/">OneLess</a> › <a href="/oneless/guides/">Guides</a> › Cost calculator</p>
+    <p class="eyebrow">Tool · September 2026</p>
+    <h1>Vaping cost calculator</h1>
+    <p class="lead">Put in what you actually spend. See it per week, per month and per year. The numbers you type stay in your browser.</p>
+  </section>
+  <div class="prose"><div class="panel calc">
+    <h2>What you spend now</h2>
+    <div class="field">
+      <label for="spend">What do you spend on vaping in a typical week?</label>
+      <div class="money"><span aria-hidden="true">£</span><input id="spend" type="number" inputmode="decimal" min="0" max="1000" step="0.5" value="20" autocomplete="off"></div>
+    </div>
+    <div class="tiles" aria-live="polite">
+      <div class="tile"><span class="num" id="perWeek">£20.00</span><span class="cap">a week</span></div>
+      <div class="tile"><span class="num" id="perMonth">£86.67</span><span class="cap">a month</span></div>
+      <div class="tile strong"><span class="num" id="perYear">£1,040.00</span><span class="cap">a year</span></div>
+    </div>
+    <p class="small">A month is a twelfth of a year, so it is a little more than four weeks.</p>
+
+    <h2>The UK duty on the liquid you use</h2>
+    <p>From 1 October 2026 the UK charges Vaping Products Duty of £2.20 on every 10ml of vaping liquid, with or without nicotine. Hardware is not covered.</p>
+    <div class="field">
+      <label for="ml">How much liquid do you get through in a week, in millilitres?</label>
+      <div class="money"><input id="ml" type="number" inputmode="decimal" min="0" max="500" step="1" value="10" autocomplete="off"><span aria-hidden="true">ml</span></div>
+      <p class="hint">A standard bottle is 10ml. A prefilled pod is usually 2ml.</p>
+    </div>
+    <div class="tiles two" aria-live="polite">
+      <div class="tile"><span class="num" id="dutyWeek">£2.20</span><span class="cap">duty on that liquid, a week</span></div>
+      <div class="tile"><span class="num" id="dutyYear">£114.40</span><span class="cap">duty on that liquid, a year</span></div>
+    </div>
+    <p><strong>That is the duty itself, and it is the only certain figure.</strong> It is charged to the business that makes or imports the liquid. How much of it reaches the shelf price is each shop's decision. If a shop passed all of it on, VAT would apply on top: <span id="passWeek">£2.64</span> a week, <span id="passYear">£137.28</span> a year. That line is an assumption, not a forecast. Check your own receipts after October.</p>
+
+    <h2>The bigger number</h2>
+    <p>The duty is the part in the news. The first figure on this page is the larger one, and it was there before any tax: what you already spend. Cutting down shrinks it a little every week. Stopping ends it.</p>
+    <p>OneLess estimates what you keep as you cut down or stop, from your own weekly spend. During a taper it counts only the days you confirm you logged in full, so the figure stays honest. It is free on the App Store, with an optional Premium part for a weekly review and one next step.</p>
+    <div class="actions" style="margin-top:24px"><a class="btn primary" href="https://apps.apple.com/gb/app/oneless-quit-vaping/id6809474163" rel="noopener">Get OneLess on the App Store</a><a class="btn ghost" href="/oneless/guides/how-to-taper-off-vaping/">How the taper works</a></div>
+
+    <h2>Sources and limits</h2>
+    <p>The duty rate and start date are from HM Revenue and Customs: <a href="https://www.gov.uk/government/news/one-month-until-vaping-products-duty-and-the-vaping-duty-stamps-scheme-start">Vaping Products Duty and the Vaping Duty Stamps Scheme</a>. Everything else on this page is arithmetic on the numbers you enter. It is general information, not financial or medical advice. For free help to stop, see the <a href="https://www.nhs.uk/better-health/quit-smoking/ready-to-quit-smoking/vaping-to-quit-smoking/how-to-quit-vaping/">NHS guidance on quitting vaping</a>.</p>
+    <noscript><p>This calculator needs JavaScript. Without it: a year is 52 times your weekly spend, and the duty is £2.20 for every 10ml.</p></noscript>
+  </div></div>
+</div>
+</main>
+<footer><div class="wrap"><span>© 2026 Chris Silver</span><span class="spacer"></span><a href="/oneless/privacy/">Privacy</a><a href="/oneless/support/">Support</a></div></footer>
+</body></html>
