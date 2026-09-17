@@ -40,6 +40,13 @@ nav.top .brand .cube { width: 22px; height: 22px; border-radius: 6px; background
 nav.top .links { margin-left: auto; display: flex; gap: 6px; }
 nav.top .links a { color: var(--text-2); text-decoration: none; padding: 8px 12px; border-radius: 999px; font-size: .95rem; }
 nav.top .links a:hover, nav.top .links a[aria-current] { color: var(--text); background: var(--glass-2); }
+/* Four links do not fit beside the wordmark on a phone: keep the cube, drop the words, tighten the links. */
+@media (max-width: 560px) {
+  nav.top .wrap { padding: 12px 14px; gap: 8px; }
+  nav.top .brand { font-size: 0; gap: 0; }
+  nav.top .links { gap: 2px; min-width: 0; }
+  nav.top .links a { padding: 8px 9px; font-size: .9rem; white-space: nowrap; }
+}
 /* Layout and type */
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 main { padding-bottom: 96px; }
